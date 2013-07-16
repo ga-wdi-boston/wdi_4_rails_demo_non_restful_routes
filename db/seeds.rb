@@ -7,10 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-  Encoding.default_external = Encoding::UTF_8
-  Encoding.default_internal = Encoding::UTF_8
-
-
 User.create(name: 'Ada Lovelace')
 User.create(name: 'Steve Jobs')
 User.create(name: 'Bill Gates')
