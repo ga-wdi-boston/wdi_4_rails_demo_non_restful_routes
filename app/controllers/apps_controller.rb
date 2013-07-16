@@ -1,7 +1,11 @@
 class AppsController < ApplicationController
   # GET /apps
   def index
-    @apps = App.all
+  	if params[:user_id]
+  		@apps = User.find(params[:user_id]).apps
+  	else
+		@apps = App.all
+	end
   end
 
   # GET /apps/1
