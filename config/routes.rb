@@ -5,9 +5,9 @@ AppStore::Application.routes.draw do
     	resources :apps, only: [:index, :new]
   end
 
-  resources :apps, only: [:index, :new]
+  resources :apps, only: [:index, :new, :show]
 
-  post '/apps/:id/buy', to: 'apps#buy', as: 'buy_app'
+  put '/apps/:id/buy', to: 'apps#buy', as: 'buy_app'
 
   get '/applications', to: redirect('/apps')
 
